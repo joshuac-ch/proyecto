@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\actividades;
 use App\Models\compannia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -38,7 +39,10 @@ class conpannia extends Controller
         $c->propietario_id = $request->pro;
         $c->tipo = $request->tipo1;
         $c->ingresos_anuales = $request->ingresos;
+        $fecha = date("Y-m-d");
+        actividades::registrar(session('usuario')->id, 'Crear', 'Compañia', $c->id, 'Se creo una nueva compañia', $fecha);
         $c->save();
+
         return redirect()->route('companias.index');
     }
 
@@ -69,7 +73,10 @@ class conpannia extends Controller
         $compannia->propietario_id = $request->pro;
         $compannia->tipo = $request->tipo1;
         $compannia->ingresos_anuales = $request->ingresos;
+        $fecha = date("Y-m-d");
+        actividades::registrar(session('usuario')->id, 'Editar', 'Cliente', $compannia->id, 'Se edito una compañia', $fecha);
         $compannia->save();
+
         return redirect()->route('companias.index');
     }
 

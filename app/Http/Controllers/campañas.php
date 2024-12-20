@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\campañas;
 use App\Models\email;
 use App\Models\publicacion;
@@ -9,6 +10,7 @@ use Illuminate\Http\Request;
 
 class campanna extends Controller
 {
+    /*
     public function agregarRecurso($campañaId, $recursoId, $recursoType)
     {
         $campaña = campañas::findOrFail($campañaId);
@@ -34,12 +36,12 @@ class campanna extends Controller
 
         return response()->json(['message' => 'Recurso no encontrado'], 404);
     }
-
+    
     private function getRecurso($recursoId, $recursoType)
     {
         switch ($recursoType) {
             case 'email':
-                return email ::find($recursoId);
+                return email::find($recursoId);
             case 'publicacion':
                 return publicacion::find($recursoId);
             case 'form':
@@ -47,14 +49,15 @@ class campanna extends Controller
             default:
                 return null;
         }
-    }
+    }*/
+
     /**
      * 
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('campañas.index');
     }
 
     /**

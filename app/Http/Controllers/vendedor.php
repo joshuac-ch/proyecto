@@ -16,13 +16,21 @@ class vendedor extends Controller
     public function index()
     {
         #$user = usuarios::all();
-        $vendedor = ModelsVendedor::all();
+        $vendedor = DB::table('usuarios')
+            ->join('admins', 'usuarios.id', '=', 'admins.user_id')
+            ->where('admins.rol', 'ventas')
+            ->select('usuarios.id', 'usuarios.nombre', 'usuarios.correo', 'admins.rol')
+            ->get();
+        //este es el antiguo $vendedor = ModelsVendedor::all();
+        // ESTE ES EL ANTIGUO return view('vendedor.index', compact('vendedor', "usuarios"));
         return view('vendedor.index', compact('vendedor'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
+
+
     public function create()
     {
         $usuarios = DB::table('usuarios')
@@ -47,9 +55,10 @@ class vendedor extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $vendedor = ModelsVendedor::findOrFail($id);
+        return  view('vendedor.show', compact('vendedor'));
     }
 
     /**

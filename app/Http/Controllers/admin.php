@@ -63,6 +63,10 @@ class admin extends Controller
         $usuarios = usuarios::all();
         return view('admin.edit', compact('admin', "usuarios"));
     }
+    public function search()
+    {
+        return view('busqueda');
+    }
 
     /**
      * Update the specified resource in storage.

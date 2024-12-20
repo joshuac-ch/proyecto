@@ -2,6 +2,10 @@
 @section('contenido')
 <div class="conteiner">
     <h1>Bienvenidos a Crear Administrador</h1>
+    <div class="btn_regresar">
+        <a href="{{route('admin.index')}}">Regresar</a>
+    </div>
+
     <form action="{{route('admin.store')}}" method="post">
         @csrf
         <div class="mb-3">

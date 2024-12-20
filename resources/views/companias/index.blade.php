@@ -25,7 +25,7 @@
                 <th scope="row">{{$c->id}}</th>
                 <td>{{$c->nombre_empresa}}</td>
                 <td>{{$c->dominio_empresa}}</td>
-                <td>{{$c->propiedatio_id}}</td>
+                <td>{{$c->propietario_id}}</td>
                 <td>{{$c->tipo}}</td>
                 <td>{{$c->ingresos_anuales}}</td>
                 <td>{{$c->created_at}}</td>

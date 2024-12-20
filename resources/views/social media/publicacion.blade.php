@@ -3,5 +3,8 @@
 <div class="conteiner">
     <h1>Publicaciones</h1>
 
+
+
+
 </div>
 @endsection

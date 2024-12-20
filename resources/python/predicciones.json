@@ -1,0 +1,74 @@
+[
+    {
+        "monto_oportunidad": 900,
+        "tiempo_oportunidad_dias": 30,
+        "numero_interacciones": 6,
+        "sector_cliente": "Telecomunicaciones",
+        "productos_ofrecidos": "producto1",
+        "region_cliente": "Lima",
+        "canal_contacto": "Email",
+        "interacciones_previas": 3,
+        "presupuesto_cliente": 950,
+        "prediccion": 0
+    },
+    {
+        "monto_oportunidad": 1500,
+        "tiempo_oportunidad_dias": 45,
+        "numero_interacciones": 10,
+        "sector_cliente": "Tecnolog\u00eda",
+        "productos_ofrecidos": "producto2",
+        "region_cliente": "Arequipa",
+        "canal_contacto": "Tel\u00e9fono",
+        "interacciones_previas": 5,
+        "presupuesto_cliente": 1600,
+        "prediccion": 0
+    },
+    {
+        "monto_oportunidad": 200,
+        "tiempo_oportunidad_dias": 6,
+        "numero_interacciones": 1,
+        "sector_cliente": "Retail",
+        "productos_ofrecidos": "producto1",
+        "region_cliente": "Trujillo",
+        "canal_contacto": "Reuni\u00f3n",
+        "interacciones_previas": 3,
+        "presupuesto_cliente": 300,
+        "prediccion": 0
+    },
+    {
+        "monto_oportunidad": 800,
+        "tiempo_oportunidad_dias": 25,
+        "numero_interacciones": 4,
+        "sector_cliente": "Salud",
+        "productos_ofrecidos": "producto3",
+        "region_cliente": "Cusco",
+        "canal_contacto": "Email",
+        "interacciones_previas": 1,
+        "presupuesto_cliente": 700,
+        "prediccion": 0
+    },
+    {
+        "monto_oportunidad": 1100,
+        "tiempo_oportunidad_dias": 35,
+        "numero_interacciones": 5,
+        "sector_cliente": "Educaci\u00f3n",
+        "productos_ofrecidos": "producto2",
+        "region_cliente": "Lima",
+        "canal_contacto": "Tel\u00e9fono",
+        "interacciones_previas": 4,
+        "presupuesto_cliente": 1200,
+        "prediccion": 0
+    },
+    {
+        "monto_oportunidad": "550",
+        "tiempo_oportunidad_dias": "15",
+        "numero_interacciones": "2",
+        "sector_cliente": "Comercio",
+        "productos_ofrecidos": "1",
+        "region_cliente": "Arequipa",
+        "canal_contacto": "Telefono",
+        "interacciones_previas": "0",
+        "presupuesto_cliente": "500",
+        "prediccion": 0
+    }
+]

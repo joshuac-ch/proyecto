@@ -1,7 +1,10 @@
 @extends('layout.app')
 @section('contenido')
 <div class="conteiner">
-    <h1>Bienvenidos a Crear Vendedor</h1>
+    <h1>Crear nuevo Vendedor</h1>
+    <div class="btn_regresar">
+        <a href="{{route('vendedor.index')}}">Regresar</a>
+    </div>
     <form action="{{route('vendedor.store')}}" method="post">
         @csrf
         <div class="mb-3">

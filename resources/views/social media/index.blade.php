@@ -2,38 +2,65 @@
 
 @section('contenido')
 <style>
-    .conectar {}
+    .btn-social-media {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 20px;
+    }
+
+    .boton-x {
+        font-size: 15px;
+        background-color: black;
+        color: white;
+        border: 0px;
+        border-radius: 5px;
+        padding: 0px 6px;
+    }
+
+    .boton-x:hover {
+        color: white;
+        filter: brightness(110%);
+    }
+
+    .face {
+        font-size: 17px;
+        padding: 1px 0px;
+
+    }
 </style>
 <div class="conteiner">
     <h1>Redes Sociales</h1>
     <a href="" class="conectar">Conectar Cuenta</a>
     <a href="">Conectar a Facebook</a>
     @csrf
-    <fb:login-button
-        scope="public_profile,email"
-        onlogin="checkLoginState();">
-    </fb:login-button>
-    <fb:login-button
-        scope="pages_manage_posts,pages_read_engagement,pages_show_list"
-        onlogin="checkLoginState();">
-    </fb:login-button>
-    <!--<div id="user-info"></div>-->
+    <div class="btn-social-media">
+        <div class="btn">
+            <fb:login-button class="face"
+                scope="public_profile,email"
+                onlogin="checkLoginState();">
+            </fb:login-button>
+        </div>
+        <div class="btn">
+            <fb:login-button class="face"
+                scope="pages_manage_posts,pages_read_engagement,pages_show_list"
+                onlogin="checkLoginState();">
+            </fb:login-button>
+        </div>
+        <div class="btn">
+            <a href="/auth/twitter" class="boton-x"><i class="fa-brands fa-x-twitter"></i> Log In</a>
+        </div>
+    </div>
     <script>
-        const axios = require('axios');
-        const BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAB7OwQEAAAAAmXKM7XyZG0%2F19I%2BLf%2B9v5wJjwhA%3DTPqKKgFvBq1pgFvAjjqbldfkBnmCXVPdirzQutUFJLYe9K9Ytv';
+        /*let saludo;
 
-        axios.post('https://api.twitter.com/2/tweets', {
-            text: '¡Hola Mundo! Este es un tweet desde la API de Twitter.'
-        }, {
-            headers: {
-                'Authorization': `Bearer ${BEARER_TOKEN}`,
-                'Content-Type': 'application/json'
-            }
-        }).then(response => {
-            console.log('Tweet publicado:', response.data);
-        }).catch(error => {
-            console.error('Error publicando el tweet:', error);
-        });
+        function mifuncion() {
+            saludo = setInterval(function() {
+                console.log("hola mundo")
+            }, 4000)
+        }
+        mifuncion()*/
     </script>
     <script>
         window.fbAsyncInit = function() {

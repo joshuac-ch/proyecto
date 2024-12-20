@@ -1,9 +1,19 @@
 @extends('layout.app')
 @section('contenido')
 <div class="conteiner">
-    <h1>Bienvenido a Crear Contacto</h1>
-    <form action="{{route('contactos.store')}}" method="post">
+    <h1>Crear Contacto</h1>
+    <div class="btn_regresar">
+        <a href="{{route('contactos.index')}}">Regresar</a>
+    </div>
+    <form action="{{route('contactos.store')}}" method="post" enctype="multipart/form-data">
         @csrf
+        <div class="mb-3">
+            <label for="" class="form-label">Imagen Perfil</label>
+            <input type="file" class="form-control" name="image1" id="image1">
+        </div>
+        <div class="mb-3" id="mostrar">
+
+        </div>
         <div class="mb-3">
             <label for="" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="nom" id="">
@@ -47,4 +57,24 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+<script>
+    let mostrar_imagen = document.getElementById("mostrar");
+    let image1 = document.getElementById("image1");
+    image1.addEventListener('change', function() {
+        let valor_img = this.files[0]
+
+        if (valor_img) {
+            let lector = new FileReader();
+            let elemento_img = document.createElement("img")
+            elemento_img.style.width = "100px"
+            lector.onload = function(e) {
+                console.log(e.target.result)
+                elemento_img.src = e.target.result;
+            }
+            lector.readAsDataURL(valor_img)
+            mostrar_imagen.innerHTML = ""
+            mostrar_imagen.appendChild(elemento_img)
+        }
+    })
+</script>
 @endsection

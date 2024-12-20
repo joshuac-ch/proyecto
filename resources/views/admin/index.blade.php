@@ -1,7 +1,10 @@
 @extends('layout.app')
+
 @section('contenido')
+
 <div class="conteiner">
-    <h1>Bienvenido a Administradores</h1>
+    <h1>Administradores </h1>
+
     <div>
         <a href="{{route('admin.create')}}" class="creacion">Crear Administrador</a>
     </div>

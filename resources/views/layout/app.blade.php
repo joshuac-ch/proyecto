@@ -20,10 +20,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+    <link rel="icon" type="image/jpg" href="{{asset('assets/img/nino.jpg')}}">
     <title>
         Argon Dashboard 2 by Creative Tim
     </title>
+    <!-- Dependencia calendar-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
@@ -32,12 +37,40 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/5501ed0b56.js" crossorigin="anonymous"></script>
     <style>
+        .sugerencia {
+            background-color: #5e72e4;
+            padding: 5px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            color: white;
+        }
+
+        #sugerencias {
+            z-index: 99;
+            position: absolute;
+            display: none;
+            border: 1px solid #ddd;
+            width: 300px;
+
+
+        }
+
+        .sugerencia:hover {
+            background-color: white;
+            color: #5e72e4;
+        }
+
         .conteiner {
+
             margin-top: 230px;
+            margin-left: 20px;
+            margin-right: 0px;
 
         }
 
@@ -60,6 +93,87 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .nino {
+            border-radius: 50px;
+
+        }
+
+        .misrutas {
+            display: none;
+            transition: all .5s ease;
+        }
+
+        #misherra {
+            display: none;
+            transition: all .5s ease;
+        }
+
+        #resultados {
+            color: black;
+            position: absolute;
+            top: 5rem;
+            left: 50%;
+        }
+
+        .btn_regresar {
+            text-align: center;
+            border: 2px solid #5e72e4;
+            padding: 5px 10px;
+            margin: 10px;
+            max-width: 110px;
+            border-radius: 20px;
+
+            a {
+                color: #5e72e4;
+            }
+        }
+
+        .btn_regresar:hover {
+            background-color: #5e72e4;
+            transition: all .5s ease;
+            border-color: #344767;
+
+            a {
+                color: white;
+
+            }
+        }
+
+        .perfil2 {
+            padding: 15px 10px;
+            gap: .5rem;
+            font-size: 15px;
+            text-align: center;
+
+            display: flex;
+            justify-content: space-between;
+            border-radius: 17px;
+            align-items: center;
+
+            .perfil-name2 {
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                width: 40px;
+                height: 40px;
+
+
+
+            }
+
+            span {
+
+
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                text-align: start;
+
+            }
+        }
     </style>
 </head>
 
@@ -67,115 +181,156 @@
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
     <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
         <div class="sidenav-header">
-            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-                <img src="{{asset('assets/img/logo-ct-dark.png')}}" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
-            </a>
+            <div class="perfil2">
+                <!-- VERIFICA SI NO ESTRAS LOGUEADO O LA SESSION ESTA VACIA APARECERA COMO USUARIO NO AUTENTICADO-->
+                @if (session('usuario')!=null)
+                @if (session('usuario')->imagen !=null)
+
+                <img src="{{session('usuario')->imagen}}" style="width:40px;height:40px;border-radius:50px" alt="no">
+                @else
+                <div class="perfil-name2">
+                    {{ucfirst(substr(session('usuario')->nombre,0,1))}}
+                </div>
+                @endif
+                <!--<span> {{session('usuario')->nombre}} <a href="{{route('usuarios.show',session('usuario'))}}"><i class='bx bx-show-alt'></i></a></span>-->
+                <span class="ms-1 font-weight-bold">
+                    {{ session('usuario')->nombre }}
+                    {{ session('usuario')->correo }}
+                </span>
+                @else
+                <p>Usuario no autenticado</p>
+                @endif
+            </div>
+
         </div>
-        <hr class="horizontal dark mt-0">
+        <hr class=" horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/dashboard.html">
+                    <a class="nav-link active" href="{{route('dash.index')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Dashboard</span>
                     </a>
+
                 </li>
                 <li class="nav-item tablas">
-                    <a class="nav-link " href="../pages/tables.html">
+                    <a class="nav-link btn-tabla" href="{{route('usuarios.index')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Tables <i class='bx bxs-caret-down-circle'></i>
+                        <span class="nav-link-text ms-1 tablas1">Gestionar <i class="fa-solid fa-chevron-right"></i>
 
                         </span>
 
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/billing.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Billing</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/virtual-reality.html">
-                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-app text-info text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
-                    </a>
-                </li>
-                <li class="nav-item">
+
+                <li class="nav-item misrutas">
 
                     <div class="nav-link">
                         <ul>
                             <li><a href="{{route('usuarios.index')}}">Usuarios</a></li>
                             <li><a href="{{route('admin.index')}}">Administradores</a></li>
-                            <li><a href="{{route('productos.index')}}">Productos</a></li>
-                            <li><a href="{{route('companias.index')}}">Compañias</a></li>
                             <li><a href="{{route('vendedor.index')}}">Vendedores</a></li>
-                            <li><a href="{{route('opo.index')}}">Oportunidades</a></li>
+                            <li><a href="{{route('productos.index')}}">Productos</a></li>
+                            <li><a href="{{route('compannias.index')}}">Compañias</a></li>
+                            <li><a href="{{route('oportunidades.index')}}">Oportunidades</a></li>
+                            <li><a href="{{route('social.index')}}">Redes Sociales</a></li>
+                            <li><a href="{{route('contactos.index')}}">Contactos</a></li>
+                            <li><a href="{{route('campana.index')}}">Campañas</a></li>
 
                         </ul>
                     </div>
                 </li>
 
-
                 <li class="nav-item">
+                    <a class="nav-link " href="{{route('actividad.index')}}">
+                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Actividades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('mostrar.predicciones')}}">
+                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-app text-info text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Prediccion</span>
+                    </a>
+                </li>
+
+                <!-- <li class="nav-item">
                     <a class="nav-link " href="../pages/rtl.html">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">RTL</span>
                     </a>
+                </li>-->
+                <li class="nav-item " id="herramientas">
+                    <a class="nav-link btn_herramientas" href="{{route('usuarios.index')}}">
+                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Herramientas <i class="fa-solid fa-chevron-right btnmover"></i> </span>
+                    </a>
                 </li>
+                <li class="nav-item " id="misherra">
+
+                    <div class="nav-link">
+                        <ul>
+                            <li><a href="{{route('plantillas.index')}}">Plantillas</a></li>
+                            <li><a href="{{route('tarea.index')}}">Tareas</a></li>
+                            <li><a href="{{route('documento.index')}}">Documentos</a></li>
+                            <li><a href="{{route('calendario.index')}}">Reuniones</a></li>
+                        </ul>
+                    </div>
+                </li>
+
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/profile.html">
+                    <!--SI NO ME REGISTRO ME LLEVA AL LOGIN--> <a class="nav-link " href="{{ session('usuario') ? route('perfil.user', session('usuario')->id) : route('user.login') }}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Profile</span>
+                        <span class="nav-link-text ms-1">Perfil</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-in.html">
+                    <a class="nav-link " href="{{route('user.login')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
+                        <span class="nav-link-text ms-1">Iniciar Session</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-up.html">
+                    <a class="nav-link " href="{{route('log.login')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-collection text-info text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
+                        <span class="nav-link-text ms-1">Cerrar session</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="sidenav-footer mx-3 ">
             <div class="card card-plain shadow-none" id="sidenavCard">
-                <img class="w-50 mx-auto" src="../assets/img/illustrations/icon-documentation.svg" alt="sidebar_illustration">
+                <img class="w-50 mx-auto" src="{{asset('assets/img/illustrations/icon-documentation.svg')}}" alt="sidebar_illustration">
                 <div class="card-body text-center p-3 w-100 pt-0">
                     <div class="docs-info">
-                        <h6 class="mb-0">Need help?</h6>
-                        <p class="text-xs font-weight-bold mb-0">Please check our docs</p>
+                        <h6 class="mb-0">Necesitas ayuda</h6>
+                        <p class="text-xs font-weight-bold mb-0">Por favor checa el tutorial</p>
                     </div>
                 </div>
             </div>
-            <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard" target="_blank" class="btn btn-dark btn-sm w-100 mb-3">Documentation</a>
-            <a class="btn btn-primary btn-sm mb-0 w-100" href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
+            <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard" target="_blank" class="btn btn-dark btn-sm w-100 mb-3">Tutorial</a>
+            <a class="btn btn-primary btn-sm mb-0 w-100" href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=sidebarfree" type="button">Ver mas</a>
         </div>
     </aside>
     <main class="main-content position-relative border-radius-lg ">
@@ -191,11 +346,17 @@
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                        <div class="input-group">
-                            <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" placeholder="Type here...">
+                        <div class="inpu-group">
+                            <!--<span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>-->
+
+                            <input type="text" class="form-control" id="buscador" onkeyup="buscarSugerencias(this.value)" placeholder="Type here...">
+                            <div id="sugerencias"></div>
                         </div>
+
                     </div>
+
+
+
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
@@ -217,6 +378,11 @@
                                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
                             </a>
                         </li>
+                        <style>
+                            .navbar-nav>li>.dropdown-menu {
+                                background-color: ghostwhite
+                            }
+                        </style>
                         <li class="nav-item dropdown pe-2 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-bell cursor-pointer"></i>
@@ -226,7 +392,7 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                                                <img src="{{asset('assets/img/small-logos/sendcolorido.jpg')}}" class="avatar avatar-sm  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="text-sm font-weight-normal mb-1">
@@ -240,15 +406,47 @@
                                         </div>
                                     </a>
                                 </li>
+                                @if(isset($noti) && $noti->count())
+                                @foreach ($noti as $n)
                                 <li class="mb-2">
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                                <img src="{{asset('assets/img/small-logos/campana6.png')}}" class="avatar avatar-sm me-3">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="text-sm font-weight-normal mb-1">
-                                                    <span class="font-weight-bold">New album</span> by Travis Scott
+                                                    <span class="font-weight-bold">{{$n->mensaje}} </span><br>
+                                                    <!--USO DE CARBON EN LARAVEL EN VES DE @PHP-->
+                                                    <span>La fecha de cierre es el {{ \Carbon\Carbon::parse($n->hora)->format('j F') }}</span>
+                                                    <span>
+                                                        Faltan {{ floor(\Carbon\Carbon::parse($n->hora)->diffInDays(\Carbon\Carbon::now())) }} días
+                                                    </span>
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    {{ $n->created_at->diffForHumans() }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                @endforeach
+                                @else
+                                <li class="mb-2 text-center">
+                                    <span class="text-sm text-secondary">No hay notificaciones</span>
+                                </li>
+                                @endif
+
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="{{asset('assets/img/small-logos/cinco.jpg')}}" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">New album</span> by Gotobuen No Hanayome
                                                 </h6>
                                                 <p class="text-xs text-secondary mb-0">
                                                     <i class="fa fa-clock me-1"></i>
@@ -374,6 +572,140 @@
     <script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
     <script src="{{asset('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
     <script src="{{asset('assets/js/plugins/chartjs.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            let input = document.getElementById("buscador");
+            let contenedor = document.getElementById('sugerencias')
+            contenedor.style.display = 'none';
+
+
+        });
+        // Esta función simula la búsqueda de sugerencias en el backend (puedes adaptarlo para hacerlo dinámico desde el servidor)
+        async function obtenerSugerencias() {
+            try {
+                const response = await fetch(`/sugerencias`);
+                if (!response.ok) throw new Error("Error al obtener sugerencias");
+                const sugerencias = await response.json();
+                return sugerencias; // Retorna el listado completo de sugerencias
+            } catch (error) {
+                console.error("Error al obtener las sugerencias", error);
+            }
+        }
+
+        async function buscarSugerencias(query) {
+            // Obtiene todas las sugerencias al cargar (puedes mejorar para obtener solo la primera vez)
+            const sugerencias = await obtenerSugerencias();
+
+            // Filtra sugerencias en base al input
+            if (query.length > 0) {
+                const sugerenciasFiltradas = sugerencias.filter(sugerencia =>
+                    sugerencia.toLowerCase().includes(query.toLowerCase())
+                );
+
+                mostrarSugerencias(sugerenciasFiltradas);
+            } else {
+                document.getElementById("sugerencias").innerHTML = "";
+            }
+        }
+
+        function mostrarSugerencias(sugerencias) {
+            const sugerenciasDiv = document.getElementById("sugerencias");
+            sugerenciasDiv.innerHTML = "";
+
+            if (sugerencias.length === 0) {
+                sugerenciasDiv.style.display = 'none';
+                return;
+            }
+
+            sugerenciasDiv.style.display = 'block';
+
+            sugerencias.forEach(sugerencia => {
+                const div = document.createElement("div");
+                div.className = "sugerencia";
+                div.innerText = sugerencia;
+
+                div.onclick = function() {
+                    document.getElementById("buscador").value = sugerencia;
+                    window.location.href = `/${sugerencia}`;
+                    sugerenciasDiv.innerHTML = "";
+                };
+
+                sugerenciasDiv.appendChild(div);
+            });
+        }
+    </script>
+
+    <script>
+        function buscar() {
+            // Obtiene el valor ingresado en el campo de búsqueda
+            var query = document.getElementById("buscador").value;
+
+            // Si hay un valor, redirige a la página de resultados con la query
+            if (query) {
+                window.location.href = "/admin?query=" + query;
+            }
+        }
+        $(document).ready(function() {
+            $('#buscador').on('keyup', function() {
+                var query = $(this).val();
+
+                $.ajax({
+                    url: "{{ route('admin.index') }}", // Ruta que manejará la búsqueda
+                    type: "GET",
+                    data: {
+                        'query': query
+                    },
+                    success: function(data) {
+                        $('#resultados').html(data); // Actualiza el div con los resultados
+                    }
+                });
+            });
+        });
+
+
+
+        //let varejemplo = document.getElementById();
+        let palanca = true;
+        let btn_lef = document.querySelector(".fa-chevron-right");
+        let btn_tabla = document.querySelector(".btn-tabla");
+        let rutas = document.querySelector(".misrutas");
+        btn_tabla.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (palanca) {
+                rutas.style.display = 'block';
+                btn_lef.style.rotate = "90deg";
+                palanca = false
+            } else {
+                rutas.style.display = 'none';
+                btn_lef.style.rotate = "0deg";
+                palanca = true
+            }
+        });
+
+        let jala = true;
+        let btn_gerramientas = document.querySelector(".btn_herramientas");
+        let btn = document.querySelector(".btnmover");
+        let herramientoas = document.getElementById("herramientas");
+        let mostrarHerramientas = document.getElementById("misherra")
+        btn_gerramientas.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (jala) {
+                mostrarHerramientas.style.display = "block";
+                btn.style.rotate = "90deg";
+                jala = false
+            } else {
+                mostrarHerramientas.style.display = "none"
+                btn.style.rotate = "0deg";
+                jala = true
+            }
+        });
+    </script>
+
+
+    <!-- ESTE SCRIPT ES EL PRINCIPAL
     <script>
         var ctx1 = document.getElementById("chart-line").getContext("2d");
 
@@ -385,9 +717,9 @@
         new Chart(ctx1, {
             type: "line",
             data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Nov", "Dic"],
                 datasets: [{
-                    label: "Mobile apps",
+                    label: "ventas",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
@@ -465,7 +797,7 @@
             }
             Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
-    </script>
+    </script>_ -->
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->

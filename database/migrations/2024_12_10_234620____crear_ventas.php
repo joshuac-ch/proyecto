@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('ventas', function (Blueprint $table) {
             $table->id();
-            $table->enum("rol", ["ventas", "marketing", "TI", "comercio", "servicios", "admin usuarios"]);
-            $table->unsignedBigInteger("user_id");
-            $table->foreign("user_id")->on("usuarios")->references("id");
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('ventas');
     }
 };

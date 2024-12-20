@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('seguimiento', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("oportunidad_id");
-            $table->foreign("oportunidad_id")->on("oportunidad")->references("id");
+            $table->foreign("oportunidad_id")->on("oportunidads")->references("id");
             $table->text("descripcion");
             $table->date("fecha");
             #EL ID RESPONSABLE DEBERIA SER DE OPORTUNIDAD O DE USUARIOS PUEDE QUE NO SIEMPRE
@@ -26,10 +26,23 @@ return new class extends Migration
             $table->unsignedBigInteger("cliente_id");
             //$table->foreign("cliente_id")->on("contacto")->references("id");
             $table->string("cliente_type");
-            $table->enum("tipo_seguimiento",["llamada","correo","reunion","mensaje de texto",
-                                            "visita de persona","encuestas","publicaicon"]);
-            $table->enum("estado_seguimiento",["pendiente","en progreso","completado",
-                                                "cancelado","reprogramado","no contactado"]);
+            $table->enum("tipo_seguimiento", [
+                "llamada",
+                "correo",
+                "reunion",
+                "mensaje de texto",
+                "visita de persona",
+                "encuestas",
+                "publicaicon"
+            ]);
+            $table->enum("estado_seguimiento", [
+                "pendiente",
+                "en progreso",
+                "completado",
+                "cancelado",
+                "reprogramado",
+                "no contactado"
+            ]);
             $table->timestamps();
         });
     }

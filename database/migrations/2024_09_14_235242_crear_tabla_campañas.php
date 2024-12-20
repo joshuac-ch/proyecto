@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string("nombre");
             $table->date("fechainicio");
             $table->date("fechafin");
-           $table->enum("estado",["borrador","pendiente","en curso","finalizada","suspendida","cancelada","archivada","en revision","otro"]);
-           #administrador deberia ser el propietario o usuarios?
+            $table->enum("estado", ["borrador", "pendiente", "en curso", "finalizada", "suspendida", "cancelada", "archivada", "en revision", "otro"]);
+            #administrador deberia ser el propietario o usuarios?
             #porque usuarios porque es la tabla que tendra todos los usuarios 
             $table->unsignedBigInteger("admin_id");
-            $table->foreign("admin_id")->references("id")->on("admin");
+            $table->foreign("admin_id")->references("id")->on("admins");
             #como se deberia realizar el recurso
             #$table->unsignedBigInteger("recurso");
             #$table->foreign("recurso");

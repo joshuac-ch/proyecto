@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('noti_ses', function (Blueprint $table) {
             $table->id();
-            $table->enum("rol", ["ventas", "marketing", "TI", "comercio", "servicios", "admin usuarios"]);
-            $table->unsignedBigInteger("user_id");
-            $table->foreign("user_id")->on("usuarios")->references("id");
+            $table->string('mensaje');
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id')->on('usuarios')->references('id');
+            $table->boolean('leida')->default(false);
+            $table->string('hora');
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('noti_ses');
     }
 };

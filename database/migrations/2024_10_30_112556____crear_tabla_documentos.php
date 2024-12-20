@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('documentos', function (Blueprint $table) {
             $table->id();
-            $table->enum("rol", ["ventas", "marketing", "TI", "comercio", "servicios", "admin usuarios"]);
-            $table->unsignedBigInteger("user_id");
-            $table->foreign("user_id")->on("usuarios")->references("id");
+            $table->string('nombre');
+            $table->string('ruta');
+            $table->unsignedBigInteger('id_propietario');
+            $table->foreign("id_propietario")->on('usuarios')->references('id');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('documentos');
     }
 };

@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('contacto_reunion', function (Blueprint $table) {
             $table->id();
-            $table->enum("rol", ["ventas", "marketing", "TI", "comercio", "servicios", "admin usuarios"]);
-            $table->unsignedBigInteger("user_id");
-            $table->foreign("user_id")->on("usuarios")->references("id");
+            $table->foreignId('reuniones_id')->constrained('reuniones')->onDelete('cascade');
+            $table->foreignId('contacto_id')->constrained('contactos')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('contacto_reunion');
     }
 };

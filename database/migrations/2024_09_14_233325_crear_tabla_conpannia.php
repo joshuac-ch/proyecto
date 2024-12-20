@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('compannia', function (Blueprint $table) {
+        Schema::create('compannias', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre empresa");
-            $table->string("dominio empresa");
+            $table->string("nombre_empresa");
+            $table->string("dominio_empresa");
             #------------------------------------
             $table->unsignedBigInteger("propietario_id");
-            $table->foreign("propietario_id")->on("usuarios")->references("id"); 
+            $table->foreign("propietario_id")->on("usuarios")->references("id");
             #-------------------------------
-            $table->enum("tipo",["tecnologia","medicina","negocios","otro"]);
-            $table->string("ingresos anuales")->nullable();
+            $table->enum("tipo", ["tecnologia", "medicina", "negocios", "otro"]);
+            $table->string("ingresos_anuales")->nullable();
             $table->timestamps();
         });
     }

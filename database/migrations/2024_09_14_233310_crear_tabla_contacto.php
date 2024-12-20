@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacto', function (Blueprint $table) {
+        Schema::create('contactos', function (Blueprint $table) {
             $table->id();
+            $table->string('imagen')->nullable();
             $table->string("nombre");
             $table->string("apellido");
             $table->string("correo");
@@ -21,8 +22,16 @@ return new class extends Migration
             $table->foreign("propietario_id")->on("usuarios")->references("id");
             #------------------------------------------------------------
             $table->string("telefono");
-            $table->enum("estado Lead",["nuevo","calificado","en contacto","interesado",
-                                        "no interesado","en espera","cliente","archivado"]);
+            $table->enum("estado_lead", [
+                "nuevo",
+                "calificado",
+                "en contacto",
+                "interesado",
+                "no interesado",
+                "en espera",
+                "cliente",
+                "archivado"
+            ]);
             $table->timestamps();
         });
     }

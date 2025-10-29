@@ -36,7 +36,7 @@ class homecontroller extends Controller
         // Ejemplo de datos obtenidos del modelo
         //$oportunidades = oportunidad::with('cliente', 'vendedor')->get();
         $oportunidades = prediccion::all();
-        //porcentaje ganado 
+        //porcentaje ganado
         $oportunidades_ganadas = $oportunidades->where('estado_predicho', '>=', 50)->count();
         $total_oportunidades = $oportunidades->count();
         $porcentaje_ganadas = $total_oportunidades > 0 ? round(($oportunidades_ganadas / $total_oportunidades) * 100) : 0;
@@ -56,7 +56,7 @@ class homecontroller extends Controller
             'sectores_mas_exitosos' => $oportunidades->groupBy('sector_cliente')
                 ->map(fn($sector) => [ //ponemos para que recorra todo en un array
                     'sector' => $sector->first()->sector_cliente, //el nombre del sector
-                    'exitosas' => $sector->where('estado_predicho', '>=', 50)->count() //el conteo 
+                    'exitosas' => $sector->where('estado_predicho', '>=', 50)->count() //el conteo
                 ])
                 ->sortByDesc('exitosas')
                 ->take(3)
@@ -162,7 +162,7 @@ class homecontroller extends Controller
             'sectores_mas_exitosos' => $oportunidades->groupBy('sector_cliente')
                 ->map(fn($sector) => [ //ponemos para que recorra todo en un array
                     'sector' => $sector->first()->sector_cliente, //el nombre del sector
-                    'exitosas' => $sector->where('estado_predicho', '>=', 50)->count() //el conteo 
+                    'exitosas' => $sector->where('estado_predicho', '>=', 50)->count() //el conteo
                 ])
                 ->sortByDesc('exitosas')
                 ->take(3)

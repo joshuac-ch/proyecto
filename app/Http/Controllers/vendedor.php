@@ -1,7 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\actividades;
 use App\Models\admin;
 use App\Models\usuarios;
 use App\Models\vendedor as ModelsVendedor;
@@ -56,9 +55,14 @@ class vendedor extends Controller
      * Display the specified resource.
      */
     public function show($id)
-    {
+    { //filtrar actividades de cada persona
+        $actividades = DB::table('usuarios')
+            ->join('actividades', 'usuarios.id', '=', 'actividades.anfitrion')
+            ->where('usuarios.id', '=', $id)
+            ->select('actividades.*', 'usuarios.nombre') // Selecciona solo lo necesario
+            ->get();
         $vendedor = ModelsVendedor::findOrFail($id);
-        return  view('vendedor.show', compact('vendedor'));
+        return  view('vendedor.show', compact('vendedor', 'actividades'));
     }
 
     /**

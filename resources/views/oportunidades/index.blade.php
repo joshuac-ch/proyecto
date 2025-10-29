@@ -21,7 +21,7 @@
     }
 </style>
 <div class="conteiner">
-    <h1>Bienvenido a Oportunidades</h1>
+    <h1>Oportunidades</h1>
     <div>
         <a href="{{route('oportunidades.create')}}" class="creacion">Nueva Oportunidad</a>
     </div>
@@ -204,7 +204,7 @@
             </div>
             @endforeach
         </div>
-        <!-- ESTADOS ANTIGUOS 
+        <!-- ESTADOS ANTIGUOS
         <div class="estados">
             <div class="estado e" id="nuevo">
                 <h3>Nuevo</h3>

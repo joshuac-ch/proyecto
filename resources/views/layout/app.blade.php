@@ -181,7 +181,7 @@
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
     <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
         <div class="sidenav-header">
-            <div class="perfil2">
+            <div class="d-flex justify-content-start perfil2">
                 <!-- VERIFICA SI NO ESTRAS LOGUEADO O LA SESSION ESTA VACIA APARECERA COMO USUARIO NO AUTENTICADO-->
                 @if (session('usuario')!=null)
                 @if (session('usuario')->imagen !=null)
@@ -193,10 +193,15 @@
                 </div>
                 @endif
                 <!--<span> {{session('usuario')->nombre}} <a href="{{route('usuarios.show',session('usuario'))}}"><i class='bx bx-show-alt'></i></a></span>-->
-                <span class="ms-1 font-weight-bold">
+               <div class="d-flex flex-column">
+                 <span class="font-weight-bold">
                     {{ session('usuario')->nombre }}
-                    {{ session('usuario')->correo }}
+
                 </span>
+                <span class=" font-weight-bold">
+                     {{ session('usuario')->correo }}
+                </span>
+               </div>
                 @else
                 <p>Usuario no autenticado</p>
                 @endif

@@ -33,7 +33,7 @@
         height: 100vw;
         /* Se ajusta al viewport */
 
-        background-image: url('https://i.ibb.co/cLLdYbt/pixelcut-export.jpg');
+        background-image: url('https://static.wixstatic.com/media/1b4e42_08d46a286e494ced81dbc1f1aa424ffa~mv2.jpg/v1/fill/w_1920,h_1172,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1b4e42_08d46a286e494ced81dbc1f1aa424ffa~mv2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -518,7 +518,7 @@
             <h1>Login</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" required class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" required class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>

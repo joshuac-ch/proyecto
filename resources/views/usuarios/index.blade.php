@@ -45,7 +45,7 @@
     }
 </style>
 <div class="conteiner">
-    <h1>Bienvenido a usuarios</h1>
+    <h1>Usuarios</h1>
     <div>
         <a href="{{route('usuarios.create')}}" class="creacion">Crear Usuario</a>
     </div>

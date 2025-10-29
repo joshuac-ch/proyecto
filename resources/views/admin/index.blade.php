@@ -20,9 +20,9 @@
         <tbody>
             @foreach ($encargados as $c)
 
-            <tr>
+            <tr class="contenedor">
                 <th scope="row">
-                    <li>{{$c->id}}</li>
+                    <li >{{$c->id}}</li>
                 </th>
                 <td>
                     <li>{{$c->rol}}</li>
@@ -41,3 +41,9 @@
     </table>
 </div>
 @endsection
+<style>
+    .contenedor{
+        td li{
+            list-style: none;
+        }}
+</style>

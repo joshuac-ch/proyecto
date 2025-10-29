@@ -2,10 +2,12 @@
 @section('contenido')
 
 <div class="conteiner">
-    <h1>Bienvenido a Compañias</h1>
+    <h1>Compañias</h1>
+    <br>
     <div>
         <a href="{{route('compannias.create')}}" class="creacion">Crear Compañia</a>
     </div>
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -30,7 +32,8 @@
                 <td>{{$c->ingresos_anuales}}</td>
                 <td>{{$c->created_at}}</td>
                 <td>
-                    <a href="{{route('compannias.show',$c->id)}}"><i class="bx bx-circle"></i></a>
+                    <a href="{{route('compannias.show',$c->id)}}"><i class="bx bx-edit"></i></a>
+                    <a href=""><i class='bx bx-trash'></i> </a>
                 </td>
             </tr>
 

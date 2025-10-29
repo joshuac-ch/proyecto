@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('contenido')
 <div class="conteiner">
-    <h1>Bienvenidos a Crear Administrador</h1>
+    <h1>Crear Administrador</h1>
     <div class="btn_regresar">
         <a href="{{route('admin.index')}}">Regresar</a>
     </div>

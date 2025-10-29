@@ -1,0 +1,14 @@
+[
+    {
+        "monto_oportunidad": 450,
+        "tiempo_oportunidad_dias": 14,
+        "numero_interacciones": 2,
+        "sector_cliente": "Comercio",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Moquegua",
+        "canal_contacto": "Llamada",
+        "interacciones_previas": 2,
+        "presupuesto_cliente": 400,
+        "probabilidad_exito": 66.94267096243244
+    }
+]

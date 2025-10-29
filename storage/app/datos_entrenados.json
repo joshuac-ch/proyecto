@@ -1,0 +1,846 @@
+[
+    {
+      "monto_oportunidad": 850,
+      "tiempo_oportunidad_dias": 20,
+      "numero_interacciones": 4,
+      "sector_cliente": "Tecnología",
+      "productos_ofrecidos": 2,
+      "region_cliente": "Lima",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Email",
+      "interacciones_previas": 3,
+      "presupuesto_cliente": 1000
+    },
+    {
+      "monto_oportunidad": 300,
+      "tiempo_oportunidad_dias": 15,
+      "numero_interacciones": 2,
+      "sector_cliente": "Comercio",
+      "productos_ofrecidos": 1,
+      "region_cliente": "Arequipa",
+      "estado_oportunidad": "Perdido",
+      "canal_contacto": "Teléfono",
+      "interacciones_previas": 0,
+      "presupuesto_cliente": 500
+    },
+    {
+      "monto_oportunidad": 650,
+      "tiempo_oportunidad_dias": 25,
+      "numero_interacciones": 6,
+      "sector_cliente": "Salud",
+      "productos_ofrecidos": 3,
+      "region_cliente": "Cusco",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Redes Sociales",
+      "interacciones_previas": 1,
+      "presupuesto_cliente": 750
+    },
+    {
+      "monto_oportunidad": 950,
+      "tiempo_oportunidad_dias": 30,
+      "numero_interacciones": 5,
+      "sector_cliente": "Educación",
+      "productos_ofrecidos": 4,
+      "region_cliente": "Trujillo",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Email",
+      "interacciones_previas": 2,
+      "presupuesto_cliente": 1200
+    },
+    {
+      "monto_oportunidad": 200,
+      "tiempo_oportunidad_dias": 10,
+      "numero_interacciones": 1,
+      "sector_cliente": "Automotriz",
+      "productos_ofrecidos": 1,
+      "region_cliente": "Piura",
+      "estado_oportunidad": "Perdido",
+      "canal_contacto": "Llamada",
+      "interacciones_previas": 0,
+      "presupuesto_cliente": 300
+    },
+    {
+      "monto_oportunidad": 780,
+      "tiempo_oportunidad_dias": 27,
+      "numero_interacciones": 4,
+      "sector_cliente": "Finanzas",
+      "productos_ofrecidos": 2,
+      "region_cliente": "Lima",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Email",
+      "interacciones_previas": 4,
+      "presupuesto_cliente": 900
+    },
+    {
+      "monto_oportunidad": 450,
+      "tiempo_oportunidad_dias": 18,
+      "numero_interacciones": 3,
+      "sector_cliente": "Comercio",
+      "productos_ofrecidos": 1,
+      "region_cliente": "Arequipa",
+      "estado_oportunidad": "Perdido",
+      "canal_contacto": "Teléfono",
+      "interacciones_previas": 0,
+      "presupuesto_cliente": 450
+    },
+    {
+      "monto_oportunidad": 500,
+      "tiempo_oportunidad_dias": 12,
+      "numero_interacciones": 2,
+      "sector_cliente": "Entretenimiento",
+      "productos_ofrecidos": 2,
+      "region_cliente": "Cusco",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Llamada",
+      "interacciones_previas": 2,
+      "presupuesto_cliente": 700
+    },
+    {
+      "monto_oportunidad": 900,
+      "tiempo_oportunidad_dias": 30,
+      "numero_interacciones": 6,
+      "sector_cliente": "Telecomunicaciones",
+      "productos_ofrecidos": 3,
+      "region_cliente": "Lima",
+      "estado_oportunidad": "Ganado",
+      "canal_contacto": "Email",
+      "interacciones_previas": 3,
+      "presupuesto_cliente": 950
+    },
+    {
+      "monto_oportunidad": 400,
+      "tiempo_oportunidad_dias": 14,
+      "numero_interacciones": 2,
+      "sector_cliente": "Salud",
+      "productos_ofrecidos": 1,
+      "region_cliente": "Piura",
+      "estado_oportunidad": "Perdido",
+      "canal_contacto": "Redes Sociales",
+      "interacciones_previas": 1,
+      "presupuesto_cliente": 450
+    }
+
+
+    ,
+    {
+        "monto_oportunidad": 250,
+        "tiempo_oportunidad_dias": 7,
+        "numero_interacciones": 2,
+        "sector_cliente": "Salud",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Ica",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas": 2,
+        "presupuesto_cliente": 300
+      },
+      {
+        "monto_oportunidad": 750,
+        "tiempo_oportunidad_dias":18,
+        "numero_interacciones": 3,
+        "sector_cliente": "Salud",
+        "productos_ofrecidos": 3,
+        "region_cliente": "Piura",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas": 3,
+        "presupuesto_cliente": 800
+      },
+      {
+        "monto_oportunidad": 540,
+        "tiempo_oportunidad_dias": 15,
+        "numero_interacciones": 2,
+        "sector_cliente": "Salud",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Piura",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":1,
+        "presupuesto_cliente":600
+      },
+      {
+        "monto_oportunidad": 650,
+        "tiempo_oportunidad_dias": 18,
+        "numero_interacciones": 2,
+        "sector_cliente": "Finanzas",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Trujillo",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Email",
+        "interacciones_previas":0,
+        "presupuesto_cliente":700
+      }
+      ,
+      {
+        "monto_oportunidad": 550,
+        "tiempo_oportunidad_dias": 14,
+        "numero_interacciones": 3,
+        "sector_cliente": "Tecnología",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Arequipa",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":2,
+        "presupuesto_cliente":600
+      },
+      {
+        "monto_oportunidad": 380,
+        "tiempo_oportunidad_dias":10,
+        "numero_interacciones": 2,
+        "sector_cliente": "Educación",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Ica",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Email",
+        "interacciones_previas":0,
+        "presupuesto_cliente":400
+      }
+      ,{
+        "monto_oportunidad": 200,
+        "tiempo_oportunidad_dias": 15,
+        "numero_interacciones": 1,
+        "sector_cliente": "Tecnología",
+        "productos_ofrecidos": 1,
+        "region_cliente": "Trujillo",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":0,
+        "presupuesto_cliente":200
+      },
+      {
+        "monto_oportunidad": 730,
+        "tiempo_oportunidad_dias": 20,
+        "numero_interacciones": 4,
+        "sector_cliente": "Tecnología",
+        "productos_ofrecidos": 3,
+        "region_cliente": "Arequipa",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":3,
+        "presupuesto_cliente":800
+      },
+      {
+        "monto_oportunidad": 840,
+        "tiempo_oportunidad_dias": 10,
+        "numero_interacciones": 3,
+        "sector_cliente": "Telecomunicaciones",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Lima",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":0,
+        "presupuesto_cliente":900
+      },
+      {
+        "monto_oportunidad": 340,
+        "tiempo_oportunidad_dias": 13,
+        "numero_interacciones": 3,
+        "sector_cliente": "Salud",
+        "productos_ofrecidos": 1,
+        "region_cliente": "Cusco",
+        "estado_oportunidad": "Ganado",
+        "canal_contacto": "Llamada",
+        "interacciones_previas":2,
+        "presupuesto_cliente":400
+      }
+      ,
+      {
+        "monto_oportunidad": 600,
+        "tiempo_oportunidad_dias": 15,
+        "numero_interacciones": 1,
+        "sector_cliente": "Finanzas",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Piura",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":1,
+        "presupuesto_cliente": 600
+      },
+      {
+        "monto_oportunidad": 250,
+        "tiempo_oportunidad_dias":7,
+        "numero_interacciones": 1,
+        "sector_cliente": "Automotriz",
+        "productos_ofrecidos": 1,
+        "region_cliente": "Arequipa",
+        "estado_oportunidad": "Perdido",
+        "canal_contacto": "Redes Sociales",
+        "interacciones_previas":1,
+        "presupuesto_cliente":300
+      }
+
+,
+     
+        {
+          "monto_oportunidad": 850,
+          "tiempo_oportunidad_dias": 45,
+          "numero_interacciones": 5,
+          "sector_cliente": "Tecnología",
+          "productos_ofrecidos": 4,
+          "region_cliente": "Lima",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Email",
+          "interacciones_previas": 4,
+          "presupuesto_cliente": 900
+        },
+        {
+          "monto_oportunidad": 600,
+          "tiempo_oportunidad_dias": 30,
+          "numero_interacciones": 3,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Arequipa",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 650
+        },
+        {
+          "monto_oportunidad": 400,
+          "tiempo_oportunidad_dias": 15,
+          "numero_interacciones": 1,
+          "sector_cliente": "Educación",
+          "productos_ofrecidos": 1,
+          "region_cliente": "Cusco",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 1,
+          "presupuesto_cliente": 450
+        },
+        {
+          "monto_oportunidad": 750,
+          "tiempo_oportunidad_dias": 35,
+          "numero_interacciones": 4,
+          "sector_cliente": "Salud",
+          "productos_ofrecidos": 3,
+          "region_cliente": "Trujillo",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Email",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 800
+        },
+        {
+          "monto_oportunidad": 500,
+          "tiempo_oportunidad_dias": 20,
+          "numero_interacciones": 2,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Chiclayo",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 550
+        },
+        {
+          "monto_oportunidad": 900,
+          "tiempo_oportunidad_dias": 50,
+          "numero_interacciones": 6,
+          "sector_cliente": "Finanzas",
+          "productos_ofrecidos": 5,
+          "region_cliente": "Piura",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 3,
+          "presupuesto_cliente": 950
+        },
+        {
+          "monto_oportunidad": 320,
+          "tiempo_oportunidad_dias": 12,
+          "numero_interacciones": 1,
+          "sector_cliente": "Tecnología",
+          "productos_ofrecidos": 1,
+          "region_cliente": "Lima",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Email",
+          "interacciones_previas": 1,
+          "presupuesto_cliente": 370
+        },
+        {
+          "monto_oportunidad": 580,
+          "tiempo_oportunidad_dias": 22,
+          "numero_interacciones": 2,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 3,
+          "region_cliente": "Arequipa",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 630
+        },
+        {
+          "monto_oportunidad": 760,
+          "tiempo_oportunidad_dias": 40,
+          "numero_interacciones": 4,
+          "sector_cliente": "Salud",
+          "productos_ofrecidos": 3,
+          "region_cliente": "Cusco",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 3,
+          "presupuesto_cliente": 800
+        },
+        {
+          "monto_oportunidad": 690,
+          "tiempo_oportunidad_dias": 33,
+          "numero_interacciones": 3,
+          "sector_cliente": "Retail",
+          "productos_ofrecidos": 3,
+          "region_cliente": "Trujillo",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Email",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 730
+        },
+        {
+          "monto_oportunidad": 440,
+          "tiempo_oportunidad_dias": 18,
+          "numero_interacciones": 1,
+          "sector_cliente": "Educación",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Lima",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 1,
+          "presupuesto_cliente": 470
+        },
+        {
+          "monto_oportunidad": 890,
+          "tiempo_oportunidad_dias": 48,
+          "numero_interacciones": 5,
+          "sector_cliente": "Tecnología",
+          "productos_ofrecidos": 4,
+          "region_cliente": "Arequipa",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 4,
+          "presupuesto_cliente": 930
+        },
+        {
+          "monto_oportunidad": 570,
+          "tiempo_oportunidad_dias": 26,
+          "numero_interacciones": 3,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Cusco",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Email",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 600
+        },
+        {
+          "monto_oportunidad": 820,
+          "tiempo_oportunidad_dias": 42,
+          "numero_interacciones": 5,
+          "sector_cliente": "Salud",
+          "productos_ofrecidos": 4,
+          "region_cliente": "Trujillo",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 3,
+          "presupuesto_cliente": 870
+        },
+        {
+          "monto_oportunidad": 370,
+          "tiempo_oportunidad_dias": 14,
+          "numero_interacciones": 1,
+          "sector_cliente": "Entretenimiento",
+          "productos_ofrecidos": 1,
+          "region_cliente": "Piura",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 1,
+          "presupuesto_cliente": 400
+        },
+        {
+          "monto_oportunidad": 950,
+          "tiempo_oportunidad_dias": 55,
+          "numero_interacciones": 6,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 5,
+          "region_cliente": "Lima",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Email",
+          "interacciones_previas": 5,
+          "presupuesto_cliente": 980
+        },
+        {
+          "monto_oportunidad": 560,
+          "tiempo_oportunidad_dias": 24,
+          "numero_interacciones": 2,
+          "sector_cliente": "Educación",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Arequipa",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 600
+        },
+        {
+          "monto_oportunidad": 870,
+          "tiempo_oportunidad_dias": 49,
+          "numero_interacciones": 5,
+          "sector_cliente": "Tecnología",
+          "productos_ofrecidos": 4,
+          "region_cliente": "Cusco",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 4,
+          "presupuesto_cliente": 920
+        },
+        {
+          "monto_oportunidad": 510,
+          "tiempo_oportunidad_dias": 22,
+          "numero_interacciones": 3,
+          "sector_cliente": "Comercio",
+          "productos_ofrecidos": 2,
+          "region_cliente": "Trujillo",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Email",
+          "interacciones_previas": 2,
+          "presupuesto_cliente": 550
+        },
+        {
+          "monto_oportunidad": 640,
+          "tiempo_oportunidad_dias": 32,
+          "numero_interacciones": 4,
+          "sector_cliente": "Salud",
+          "productos_ofrecidos": 3,
+          "region_cliente": "Lima",
+          "estado_oportunidad": "Ganado",
+          "canal_contacto": "Llamada",
+          "interacciones_previas": 3,
+          "presupuesto_cliente": 690
+        },
+        {
+          "monto_oportunidad": 730,
+          "tiempo_oportunidad_dias": 39,
+          "numero_interacciones": 4,
+          "sector_cliente": "Educación",
+          "productos_ofrecidos": 4,
+          "region_cliente": "Piura",
+          "estado_oportunidad": "Perdido",
+          "canal_contacto": "Redes Sociales",
+          "interacciones_previas": 3,
+          "presupuesto_cliente": 780
+        }
+
+
+
+        ,
+        
+
+
+            {
+              "monto_oportunidad": 1200,
+              "tiempo_oportunidad_dias": 60,
+              "numero_interacciones": 7,
+              "sector_cliente": "Finanzas",
+              "productos_ofrecidos": 5,
+              "region_cliente": "Lima",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 5,
+              "presupuesto_cliente": 1300
+            },
+            {
+              "monto_oportunidad": 700,
+              "tiempo_oportunidad_dias": 35,
+              "numero_interacciones": 3,
+              "sector_cliente": "Tecnología",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Arequipa",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 750
+            },
+            {
+              "monto_oportunidad": 550,
+              "tiempo_oportunidad_dias": 25,
+              "numero_interacciones": 4,
+              "sector_cliente": "Automotriz",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Cusco",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 600
+            },
+            {
+              "monto_oportunidad": 1300,
+              "tiempo_oportunidad_dias": 70,
+              "numero_interacciones": 6,
+              "sector_cliente": "Comercio",
+              "productos_ofrecidos": 4,
+              "region_cliente": "Trujillo",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 5,
+              "presupuesto_cliente": 1400
+            },
+            {
+              "monto_oportunidad": 400,
+              "tiempo_oportunidad_dias": 15,
+              "numero_interacciones": 1,
+              "sector_cliente": "Hotelería",
+              "productos_ofrecidos": 1,
+              "region_cliente": "Ica",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 420
+            },
+            {
+              "monto_oportunidad": 250,
+              "tiempo_oportunidad_dias": 10,
+              "numero_interacciones": 1,
+              "sector_cliente": "Servicios",
+              "productos_ofrecidos": 1,
+              "region_cliente": "Puno",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 270
+            },
+            {
+              "monto_oportunidad": 500,
+              "tiempo_oportunidad_dias": 25,
+              "numero_interacciones": 3,
+              "sector_cliente": "Entretenimiento",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Tacna",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 530
+            },
+            {
+              "monto_oportunidad": 750,
+              "tiempo_oportunidad_dias": 40,
+              "numero_interacciones": 4,
+              "sector_cliente": "Educación",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Moquegua",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 3,
+              "presupuesto_cliente": 800
+            },
+            {
+              "monto_oportunidad": 600,
+              "tiempo_oportunidad_dias": 25,
+              "numero_interacciones": 2,
+              "sector_cliente": "Educación",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Junín",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 630
+            },
+            {
+              "monto_oportunidad": 100,
+              "tiempo_oportunidad_dias":5,
+              "numero_interacciones":1,
+              "sector_cliente": "Transporte",
+              "productos_ofrecidos": 1,
+              "region_cliente": "Ayacucho",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Llamada",
+              "interacciones_previas":4,
+              "presupuesto_cliente": 150
+            },
+            {
+              "monto_oportunidad": 950,
+              "tiempo_oportunidad_dias": 30,
+              "numero_interacciones": 3,
+              "sector_cliente": "Turismo",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Huancavelica",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 1000
+            },
+            {
+              "monto_oportunidad": 300,
+              "tiempo_oportunidad_dias":12,
+              "numero_interacciones": 2,
+              "sector_cliente": "Textil",
+              "productos_ofrecidos": 1,
+              "region_cliente": "Pasco",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 320
+            },
+            {
+              "monto_oportunidad": 250,
+              "tiempo_oportunidad_dias": 10,
+              "numero_interacciones": 3,
+              "sector_cliente": "Tecnología",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Apurímac",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Email",
+              "interacciones_previas": 5,
+              "presupuesto_cliente": 300
+            },
+            {
+              "monto_oportunidad": 850,
+              "tiempo_oportunidad_dias": 24,
+              "numero_interacciones": 4,
+              "sector_cliente": "Transporte",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Tumbes",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 3,
+              "presupuesto_cliente": 900
+            },
+            {
+              "monto_oportunidad": 180,
+              "tiempo_oportunidad_dias":8,
+              "numero_interacciones": 5,
+              "sector_cliente": "Tecnología",
+              "productos_ofrecidos": 2,
+              "region_cliente": "San Martín",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 4,
+              "presupuesto_cliente": 200
+            },
+            {
+              "monto_oportunidad": 520,
+              "tiempo_oportunidad_dias":18,
+              "numero_interacciones": 2,
+              "sector_cliente": "Comercio",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Ucayali",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas":1,
+              "presupuesto_cliente": 550
+            },
+            {
+              "monto_oportunidad": 770,
+              "tiempo_oportunidad_dias":24,
+              "numero_interacciones": 3,
+              "sector_cliente": "Tecnología",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Madre de Dios",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 800
+            },
+            {
+              "monto_oportunidad": 250,
+              "tiempo_oportunidad_dias": 12,
+              "numero_interacciones": 1,
+              "sector_cliente": "Agua y Saneamiento",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Amazonas",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 300
+            },
+            {
+              "monto_oportunidad": 420,
+              "tiempo_oportunidad_dias": 16,
+              "numero_interacciones": 2,
+              "sector_cliente": "Turismo",
+              "productos_ofrecidos": 1,
+              "region_cliente": "Callao",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 1,
+              "presupuesto_cliente": 450
+            },
+
+
+
+            {
+              "monto_oportunidad": 1080,
+              "tiempo_oportunidad_dias": 52,
+              "numero_interacciones": 5,
+              "sector_cliente": "Salud",
+              "productos_ofrecidos": 4,
+              "region_cliente": "Cusco",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Email",
+              "interacciones_previas": 3,
+              "presupuesto_cliente": 1120
+            },
+
+
+
+            {
+              "monto_oportunidad": 290,
+              "tiempo_oportunidad_dias":14,
+              "numero_interacciones": 4,
+              "sector_cliente": "Industria",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Huánuco",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas": 3,
+              "presupuesto_cliente": 330
+            },
+            {
+              "monto_oportunidad": 600,
+              "tiempo_oportunidad_dias": 30,
+              "numero_interacciones": 2,
+              "sector_cliente": "Alimentos",
+              "productos_ofrecidos": 2,
+              "region_cliente": "Piura",
+              "estado_oportunidad": "Perdido",
+              "canal_contacto": "Llamada",
+              "interacciones_previas": 2,
+              "presupuesto_cliente": 650
+            },
+            {
+              "monto_oportunidad": 720,
+              "tiempo_oportunidad_dias": 25,
+              "numero_interacciones": 3,
+              "sector_cliente": "Telecomunicaciones",
+              "productos_ofrecidos": 3,
+              "region_cliente": "Lambayeque",
+              "estado_oportunidad": "Ganado",
+              "canal_contacto": "Redes Sociales",
+              "interacciones_previas":3,
+              "presupuesto_cliente": 780
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+            
+    ]
+  

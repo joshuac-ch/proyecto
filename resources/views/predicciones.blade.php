@@ -125,7 +125,7 @@
 
 <script>
     const texto = `
-     
+
                 <div class="card-body">
                     <h3 class="mb-3" style="color: #2C3E50;">Información de la Oportunidad</h3>
 
@@ -169,7 +169,7 @@
                         {{ $item['probabilidad_exito'] >= 50 ? 'Ganado' : 'Perdido' }}
                     </p>
                 </div>
-            
+
     `
     const texto2 = `
         <div class="prediccion">

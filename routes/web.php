@@ -143,7 +143,7 @@ route::controller(campanna_recurso::class)->group(function () {
 route::resource('campana', App\Http\Controllers\campanna_recurso::class);
 route::get('campannas/{campana}/edit', [App\Http\Controllers\campanna_recurso::class, 'edit'])->name('campannas.edit');
 
-// Ruta para eliminar 
+// Ruta para eliminar
 route::get('campannas/{campana_espe}/delete', [App\Http\Controllers\campanna_recurso::class, 'avisoDelet'])->name('camapanas.confirmDelete');
 
 //Route::delete('campannas/{campana_espe}', [App\Http\Controllers\campanna_recurso::class, 'destroy'])->name('campanas.destoy');
@@ -151,8 +151,8 @@ route::get('campannas/{campana_espe}/delete', [App\Http\Controllers\campanna_rec
 Route::get('/sugerencias', function () {
     // Obtener todas las tablas de la base de datos
     $tablas = DB::select("
-        SELECT TABLE_NAME 
-        FROM INFORMATION_SCHEMA.TABLES 
+        SELECT TABLE_NAME
+        FROM INFORMATION_SCHEMA.TABLES
         WHERE TABLE_SCHEMA = 'sistema' AND TABLE_NAME IN('admins','campanna_recursos','campañas','compannias','contactos','emails',
                                                          'formularios','oportunidads','productos','publicacion','seguimiento','socialmedia',
                                                          'soporte','ti','usuarios','vendedors')

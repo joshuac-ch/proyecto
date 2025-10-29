@@ -1,0 +1,14 @@
+[
+    {
+        "monto_oportunidad": 550,
+        "tiempo_oportunidad_dias": 15,
+        "numero_interacciones": 3,
+        "sector_cliente": "Entretenimiento",
+        "productos_ofrecidos": 2,
+        "region_cliente": "Piura",
+        "canal_contacto": "Telefono",
+        "interacciones_previas": 0,
+        "presupuesto_cliente": 950,
+        "prediccion": 1
+    }
+]

@@ -6,8 +6,15 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "axios": "^1.7.4",
+        "axios": "^1.7.7",
         "laravel-vite-plugin": "^1.0",
         "vite": "^5.0"
+    },
+    "dependencies": {
+        "chart.js": "^4.4.6",
+        "express": "^4.21.1",
+        "form-data": "^4.0.1",
+        "fullcalendar": "^6.1.15",
+        "got": "^14.4.3"
     }
 }

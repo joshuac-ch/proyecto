@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('contenido')
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <div class="container">
         <h1>Lista de Reuniones</h1>
         <table class="table">

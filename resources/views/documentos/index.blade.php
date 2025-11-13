@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('contenido')
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Documentos</h1>
     <div class="btn">
         <a href="{{route('documento.create')}}">Crear Documento</a>

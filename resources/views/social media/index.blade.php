@@ -30,7 +30,7 @@
 
     }
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Redes Sociales</h1>
     <a href="" class="conectar">Conectar Cuenta</a>
     <a href="">Conectar a Facebook</a>

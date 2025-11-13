@@ -44,7 +44,7 @@
         border: 2px solid gray;
     }
 </style>
-<div class="conteiner">
+<div class="conteiner disabled" style="pointer-events: none">
     <h1>Usuarios</h1>
     <div>
         <a href="{{route('usuarios.create')}}" class="creacion">Crear Usuario</a>

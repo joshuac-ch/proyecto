@@ -298,8 +298,8 @@
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
                 </li>
-                <li class="nav-item">
-                    <!--SI NO ME REGISTRO ME LLEVA AL LOGIN--> <a class="nav-link " href="{{ session('usuario') ? route('perfil.user', session('usuario')->id) : route('user.login') }}">
+                <li class="nav-item ">
+                    <!--SI NO ME REGISTRO ME LLEVA AL LOGIN--> <a class="nav-link disabled" href="{{ session('usuario') ? route('perfil.user', session('usuario')->id) : route('user.login') }}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
                         </div>
@@ -307,7 +307,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('user.login')}}">
+                    <a class="nav-link disabled " href="{{route('user.login')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
                         </div>
@@ -315,7 +315,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('log.login')}}">
+                    <a class="nav-link  " href="{{route('log.login')}}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-collection text-info text-sm opacity-10"></i>
                         </div>

@@ -518,16 +518,22 @@
             <h1>Login</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="text" required class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" required class="form-control" value="nino@gmail.com" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" required name="pass" class="form-control" id="exampleInputPassword1">
+                <input type="password" required name="pass" class="form-control" value="A~$jz)\2" id="exampleInputPassword1">
             </div>
+            <div class="registrarse">
+                <button type="submit" id="submitButton" class="btn btn-primary">Ingresar</button>
+                
+            </div>
+            <!--
             <div class="registrarse">
                 <button type="submit" id="submitButton" class="btn btn-primary">Ingresar</button>
                 <a href="{{route('usuarios.create')}}">Registrarse</a>
             </div>
+            -->
             <div id="errorAlert" class="alert alert-danger d-none" role="alert">
                 Invalid credentials! Please try again.
             </div>

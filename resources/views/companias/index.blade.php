@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('contenido')
 
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Compañias</h1>
     <br>
     <div>

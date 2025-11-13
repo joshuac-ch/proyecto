@@ -20,7 +20,7 @@
         /* Agrega '...' al final del texto largo */
     }
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Oportunidades</h1>
     <div>
         <a href="{{route('oportunidades.create')}}" class="creacion">Nueva Oportunidad</a>

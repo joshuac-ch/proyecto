@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('contenido')
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Redes Sociales</h1>
     <h3>Administrar</h3>
     <h3>Lista</h3>
@@ -15,7 +15,7 @@
         var user = JSON.parse(localStorage.getItem('user'));
         if (user) {
             // document.getElementById("user-info").innerHTML =
-            //     `<div class="cuenta">            
+            //     `<div class="cuenta">
 
 
 
@@ -60,7 +60,7 @@
                 <tr>
                     <th scope="col">#ID</th>
                     <th scope="col">#NOMBRE</th>
-                    <th scope="col">#EMAIL</th>                    
+                    <th scope="col">#EMAIL</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,12 +68,12 @@
                     <th scope="row">${user.id}</th>
                     <td>${user.name}</td>
                     <td>${user.email}</td>
-                    
+
                 </tr>
             </tbody>
         </table>
-                    
-                    
+
+
                     </div>`
 
             } else {

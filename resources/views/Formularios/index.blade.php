@@ -17,7 +17,7 @@
         cursor: pointer;
     }
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Formularios</h1>
     <h3>Crear Formulario por Defecto <i class='bx bx-edit-alt'></i> </h3>
     <button type="button" class="creacion" onclick="realizarFormulario()">Crear Formulario por defecto</button>

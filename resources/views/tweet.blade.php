@@ -44,7 +44,7 @@
         text-align: center;
     }
 </style>
-<div class="conteiner1">
+<div class="conteiner1" style="pointer-events: none">
 
     <div class="container">
         <h1>Publicar un Tweet</h1>

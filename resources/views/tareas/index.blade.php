@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('contenido')
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Tareas</h1>
     <clas class="btn">
         <a href="{{route('tarea.create')}}">Crear Tarea</a>

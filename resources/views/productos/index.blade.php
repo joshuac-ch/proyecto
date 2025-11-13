@@ -84,7 +84,7 @@
     }
 </style>
 
-<div class="container mt-5 p-4 shadow-sm rounded bg-light">
+<div class="container mt-5 p-4 shadow-sm rounded bg-light" style="pointer-events: none">
     <h1 class="text-center text-primary mb-4">Gestión de Productos</h1>
 
     <!-- Botón de creación -->

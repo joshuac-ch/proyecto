@@ -28,7 +28,7 @@
         max-width: 1500px;
     }
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Predicciones de Venta</h1>
     <div class="btn">
         <a href="{{route('prediccion.create')}}">Crear Prediccion</a>

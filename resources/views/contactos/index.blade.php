@@ -24,7 +24,7 @@
 
     }
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Contactos</h1>
     <div>
         <a class="creacion" href="{{route('contactos.create')}}">Crear Contacto</a>

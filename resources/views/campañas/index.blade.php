@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('contenido')
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Campañas</h1>
     <a href="{{route('campannas.create')}}">Crear Campaña</a>
     <table class="table">

@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Administradores </h1>
 
     <div>

@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('contenido')
 
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Vendedores</h1>
     <label for="">Siempre crear el vendedor </label>
     <table class="table">

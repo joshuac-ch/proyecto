@@ -4,7 +4,7 @@
 <style>
     #calendar {}
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <button type="button" class="btn btn-primary plantilla" data-bs-toggle="modal" data-bs-target="#lista-reu">
         Lista-Reuniones
     </button>

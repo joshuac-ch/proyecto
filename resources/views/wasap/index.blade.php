@@ -3,7 +3,7 @@
 <style>
 
 </style>
-<div class="conteiner">
+<div class="conteiner" style="pointer-events: none">
     <h1>Wasap</h1>
     <form action="{{ route('enviar-imagen.wasap') }}" method="POST" enctype="multipart/form-data">
         @csrf
